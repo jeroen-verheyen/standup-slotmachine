@@ -1,0 +1,10 @@
+<div class="randomizer" data-ng-controller="RandomizerCtrl as RandomizerCtrl">
+  <div class="slotGroup" data-ng-init="RandomizerCtrl.init()"> 
+    <div class="slots">
+      <slot items="RandomizerCtrl.slotPool" to-update="RandomizerCtrl.standupFacilitator" delay="0"/>
+    </div>
+  </div>
+  <div class="randomizeButton">
+    <div class="slot-arm" data-ng-click="RandomizerCtrl.randomize()" slot-arm></div>
+  </div>
+</div>

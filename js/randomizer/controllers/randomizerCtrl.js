@@ -26,6 +26,10 @@ angular.module('randomizer')
       {
         name: 'Bo',
         penalty: 1
+      },
+      {
+        name: 'Ellen',
+        penalty: 1
       }
     ];
     ctrl.standupFacilitator = '';

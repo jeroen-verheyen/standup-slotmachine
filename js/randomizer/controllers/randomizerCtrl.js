@@ -4,32 +4,28 @@ angular.module('randomizer')
 
     this.teamMembers = [
       {
-        name: 'Werner',
-        penalty: 2
-      },
-      {
         name: 'Tom',
         penalty: 1
       },
       {
         name: 'Jeroen',
-        penalty: 2
+        penalty: 1
       },
       {
         name: 'Mike',
-        penalty: 2
+        penalty: 1
       },
       {
         name: 'Djoeni',
-        penalty: 3
+        penalty: 1
       },
       {
         name: 'Indra',
-        penalty: 2
+        penalty: 1
       },
       {
         name: 'Bo',
-        penalty: 2
+        penalty: 1
       }
     ];
     ctrl.standupFacilitator = '';

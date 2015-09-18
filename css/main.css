@@ -64,6 +64,7 @@ border: solid gray 6px;
 border-radius: 5px;
 margin-top: 100px;
 margin-bottom: 15px;
+margin-left: 10%;
 }
 
 .randomizer .buttonGroup img {
@@ -85,26 +86,39 @@ margin-right: -94px;
 
 .slots {
 display: inline-block;
+width: 80%;
+margin-left: 10%;
 }
 
 .slot {
-height: 100px;
+height: 400px;
 overflow: hidden;
 background-color: white;
-width: 120px;
-margin-left: 10px;
+width: 100%;
 text-align: center;
 position: relative;
 display: inline-block;
 }
 
+.jSlots-wrapper {  
+    overflow: hidden; /* to hide the magic */  
+    height: 400px; /* whatever the height of your list items are */  
+    display: inline-block; /* to size width correctly, can use float too, or width*/  
+    border: 1px solid #999;  
+    width: 100%
+} 
+
 .slot .item {
-  height: 100px;
-  padding-top: 40px;
+  height: 400px;
+  padding-top: 190px;
 }
 
 .slot .item img {
 width: 120px;
+}
+
+span {
+  font-family: 'Press Start 2P';
 }
 
 .locked {
@@ -118,7 +132,7 @@ text-align: center;
 .slotGroup {
 text-
 align: center;
-  background-color: rgba(255,255,0,0.2)  ;
+  background-color: rgb(189, 21, 21);
   padding: 10px;
 }
 

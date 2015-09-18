@@ -5,7 +5,7 @@ angular.module('randomizer')
     this.teamMembers = [
       {
         name: 'Werner',
-        penalty: 1
+        penalty: 2
       },
       {
         name: 'Tom',
@@ -13,23 +13,23 @@ angular.module('randomizer')
       },
       {
         name: 'Jeroen',
-        penalty: 1
+        penalty: 2
       },
       {
         name: 'Mike',
-        penalty: 1
+        penalty: 2
       },
       {
         name: 'Djoeni',
-        penalty: 1
+        penalty: 3
       },
       {
         name: 'Indra',
-        penalty: 1
+        penalty: 2
       },
       {
         name: 'Bo',
-        penalty: 1
+        penalty: 2
       }
     ];
     ctrl.standupFacilitator = '';
@@ -39,11 +39,13 @@ angular.module('randomizer')
         ctrl.createSlotPool();
     };
 
-    this.randomize = function() { $scope.$broadcast('startSlots'); };
+    this.randomize = function() { 
+      //ctrl.createSlotPool();
+      $scope.$broadcast('startSlots'); 
+    };
 
     this.createSlotPool = function() {
       var slotPool = [];
-      console.log('dd');
       ctrl.teamMembers.forEach(function(teamMember) {
         for(var i = 0; i < teamMember.penalty; i++) {
           slotPool.push(teamMember.name);
@@ -61,7 +63,6 @@ angular.module('randomizer')
         if (newVal != undefined) {
           increasePenalty()
           resetPenalty(newVal);
-          ctrl.createSlotPool();
         }
       }
     );
@@ -84,7 +85,7 @@ angular.module('randomizer')
     function getTeamMemberByName(teamMemberName) {
       for(var i = 0; i < ctrl.teamMembers.length; i++) {
         if(ctrl.teamMembers[i].name == teamMemberName) {
-          return teamMember;
+          return ctrl.teamMembers[i];
         }
       }
 

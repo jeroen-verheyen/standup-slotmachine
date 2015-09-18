@@ -1,7 +1,7 @@
 <div class="slotContainer">
 	<div class="slot">
-		<div ng-repeat="item in items" class="item">
-			<b>{{item}}</b>
+		<div ng-repeat="item in items track by $index" class="item">
+			<span>{{item}}</span>
 		</div>
 	</div>
 </div>

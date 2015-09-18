@@ -1,4 +1,24 @@
 angular.module('randomizer').directive('slot', ['$timeout', function ($timeout) {
+  function fireEvent(eventName) {
+      var event; // The custom event that will be created
+
+    if (document.createEvent) {
+      event = document.createEvent("HTMLEvents");
+      event.initEvent(eventName, true, true);
+    } else {
+      event = document.createEventObject();
+      event.eventType = eventName;
+    }
+
+    event.eventName = eventName;
+
+    if (document.createEvent) {
+      document.body.dispatchEvent(event);
+    } else {
+      document.body.fireEvent("on" + event.eventType, event);
+    }
+  }
+
   return {
     templateUrl: '/views/slot.html',
     restrict: 'E',
